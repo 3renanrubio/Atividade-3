@@ -1,0 +1,38 @@
+#include <stdio.h>
+//Renan Rubio Lino
+
+#include <stdio.h>
+
+typedef struct {
+    double peso;
+    int idade;
+    double altura;
+}
+
+void imprimePessoa(pessoa p) {
+    printf("Peso: %.2lf kg. Idade: %d anos. Altura: %.2lf m.\n", p.peso, p.idade, p.altura);
+}
+
+void lerPessoa(pessoa *p) {
+    printf("Digite o peso: ");
+    scanf("%lf", &p->peso);
+    printf("Digite a idade: ");
+    scanf("%d", &p->idade);
+    printf("Digite a altura: ");
+    scanf("%lf", &p->altura);
+}
+
+int main() {
+    pessoa pessoas[5];
+    for (int i = 0; i < 5; i++) {
+        printf("\nDados da pessoa %d:\n", i + 1);
+        lerPessoa(&pessoas[i]);
+    }
+
+    printf("\nDados das pessoas:\n");
+    for (int i = 0; i < 5; i++) {
+        imprimePessoa(pessoas[i]);
+    }
+
+    return 0;
+}
