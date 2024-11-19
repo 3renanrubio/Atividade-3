@@ -1,0 +1,19 @@
+include <stdio.h>
+
+// Renan Rubio Lino
+
+void impares (int n);
+int main () {
+int num;
+printf ("Digite um numero");
+scanf ("%d", &num);
+ímpares (num);
+return 0;
+}
+
+void impares (int n) {
+for (int i=1; i<= n; i+= 2) {
+if (i%7 ! = 0);
+    }
+  }
+}
